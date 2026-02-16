@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE ONE PIECE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+         <!-- Left fruits -->
+    <div class="fruits left">
+        <img src="assets/devilfruit1.png" alt="Devil Fruit">
+        <img src="assets/devilfruit2.png" alt="Devil Fruit">
+    </div>
+
+    <!-- Title -->
+    <h1>THE ONE PIECE</h1>
+
+    <!-- Right fruits -->
+    <div class="fruits right">
+        <img src="assets/devilfruit3.png" alt="Devil Fruit">
+        <img src="assets/devilfruit4.png" alt="Devil Fruit">
+    </div>
+    </header>
+    <section>
+        <h2>characters</h2>
+        <div>
+
+            <!-- card 1 -->
+
+            <div data-sound="assets/luffy.mp3">
+                <img src="assets/luffy.jpeg" alt="Monkey D. Luffy">
+                <h3>Monkey D. Luffy</h3>
+                <p>Captain • Straw Hat Pirates</p>
+                <p>Bounty - 3,000,000,000</p>
+                <p>Devil Fruit - Hito Hito no Mi, Model: Nika</p>
+            </div>
+
+
+            <!-- card 2 -->
+
+            <div data-sound="assets/zoro.mp3">
+                <img src="assets/zoro.jpeg" alt="Roronoa zoro">
+                <h3>Roronoa Zoro</h3>
+                <p>Sword's Man • Straw Hat Pirates</p>
+                <p>Bounty - 1,111,000,000</p>
+                <p>Devil Fruit - None</p>
+            </div>
+
+
+            <!-- card 3 -->
+
+            <div data-sound="assets/jinbei.mp3">
+                <img src="assets/jinbei.jpeg" alt="jinbei">
+                <h3>Jinbe</h3>
+                <p>Helmsman • Straw Hat Pirates</p>
+                <p>Bounty - 1,100,000,000</p>
+                <p>Devil Fruit - None</p>
+            </div>
+
+
+
+
+
+            <!-- card 4  -->
+
+            <div data-sound="assets/sanji.mp3">
+                <img src="assets/sanji.jpeg" alt="Vinsmoke Sanji">
+                <h3>Vinsmoke Sanji</h3>
+                <p>Cook • Straw Hat Pirates</p>
+                <p>Bounty - 1,032,000,000</p>
+                <p>Devil Fruit - None</p>
+            </div>
+
+
+            <!-- card 5 -->
+
+<div data-sound="assets/robin.mp3">
+    <img src="assets/robin.jpeg" alt="Nico Robin">
+    <h3>Nico Robin</h3>
+    <p>Archaeologist • Straw Hat Pirates</p>
+    <p>Bounty - 930,000,000</p>
+    <p>Devil Fruit - Hana Hana no Mi</p>
+</div>
+
+
+
+<!-- card 6 -->
+
+<div data-sound="assets/ussop.mp3">
+    <img src="assets/ussop.jpeg" alt="Usopp">
+    <h3>Usopp</h3>
+    <p>Sniper • Straw Hat Pirates</p>
+    <p>Bounty - 500,000,000</p>
+    <p>Devil Fruit - None</p>
+</div>
+
+
+
+<!-- card 7 -->
+
+<div data-sound="assets/franky.mp3">
+    <img src="assets/franky.jpeg" alt="Franky">
+    <h3>Franky</h3>
+    <p>Shipwright • Straw Hat Pirates</p>
+    <p>Bounty - 394,000,000</p>
+    <p>Devil Fruit - None (Cyborg)</p>
+</div>
+
+
+           
+            <!-- card 8 -->
+
+            <div data-sound="assets/brook.mp3">
+                <img src="assets/brook.jpeg" alt="Brook">
+                <h3>Brook</h3>
+                <p>Musician • Straw Hat Pirates</p>
+                <p>Bounty - 383,000,000</p>
+                <p>Devil Fruit - Yomi Yomi no Mi</p>
+            </div>
+
+
+
+            <!-- card 9 -->
+
+<div data-sound="assets/nami.mp3">
+    <img src="assets/nami.png" alt="Nami">
+    <h3>Nami</h3>
+    <p>Navigator • Straw Hat Pirates</p>
+    <p>Bounty - 366,000,000</p>
+    <p>Devil Fruit - None</p>
+</div>
+
+
+
+<!-- card 10 -->
+
+<div data-sound="assets/chopper.mp3">
+    <img src="assets/chopper.jpeg" alt="Tony Tony Chopper">
+    <h3>Tony Tony Chopper</h3>
+    <p>Doctor • Straw Hat Pirates</p>
+    <p>Bounty - 1,000</p>
+    <p>Devil Fruit - Hito Hito no Mi</p>
+</div>
+
+            
+
+
+
+
+
+        </div>
+    </section>
+<audio id="dialogue-player"></audio>
+<audio id="hover-sound" src="assets/hover.wav"></audio>
+
+
+<script>
+    const cards = document.querySelectorAll("section > div > div");
+    const hoverSound = document.getElementById("hover-sound");
+
+    hoverSound.volume = 0.4;
+
+    cards.forEach(card => {
+        card.addEventListener("mouseenter", () => {
+            hoverSound.currentTime = 0;
+            hoverSound.play();
+        });
+    });
+</script>
+<script>
+    const dialoguePlayer = document.getElementById("dialogue-player");
+
+    dialoguePlayer.volume = 0.6;
+
+    cards.forEach(card => {
+        card.addEventListener("click", () => {
+            const soundPath = card.getAttribute("data-sound");
+            if (!soundPath) return;
+
+            dialoguePlayer.currentTime = 0;
+            dialoguePlayer.src = soundPath;
+            dialoguePlayer.play();
+        });
+    });
+</script>
+
+
+
+
+
+    
+</body>
+</html> 

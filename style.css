@@ -1,0 +1,152 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    background-color:white;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #000;
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 80px;
+}
+
+/* Fruit containers */
+.fruits {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* EVEN spacing */
+}
+
+/* Fruit images */
+.fruits img {
+    width: 200px; /* Bigger */
+    height: auto;
+    filter: drop-shadow(0 0 15px crimson);
+    transition: transform 0.3s ease;
+}
+
+/* Hover animation */
+.fruits img:hover {
+    transform: scale(1.15) rotate(6deg);
+}
+
+.fruits {
+    width: 500px;
+    justify-content: center;
+}
+
+
+/* Card base */
+.characters div {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    transition: 
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.characters div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+}
+
+
+
+/* Characters Section */
+section {
+    padding: 60px 40px;
+    background-color: #ffffff;
+}
+
+/* Section Title */
+section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #111;
+}
+
+/* Cards Container */
+section > div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    gap: 30px;
+}
+
+/* Individual Card */
+section > div > div {
+    background-color: #f5f5f5;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+
+    box-shadow: 
+        0 12px 30px rgba(0, 0, 0, 0.18);
+        
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Hover Effect */
+section > div > div:hover {
+    transform: translateY(-8px);
+}
+
+/* Card Image */
+section img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+/* Card Text */
+section h3 {
+    font-size: 1.2rem;
+    margin: 15px;
+    color: #000;
+}
+
+section p {
+    margin: 0 15px 20px;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+section > div > div {
+    cursor: pointer;
+}
+
+section > div > div:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 30px 55px rgba(0, 0, 0, 0.28);
+    box-shadow: 0 30px 55px rgba(0, 0, 0, 0.28),
+    0 0 20px rgba(220, 20, 60, 0.25);
+
+}
+
+
+section img {
+    transition: transform 0.4s ease;
+}
+
+section > div > div:hover img {
+    transform: scale(1.05);
+}
+ 
